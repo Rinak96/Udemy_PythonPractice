@@ -4,32 +4,50 @@ from difflib import SequenceMatcher, get_close_matches
 
 data = json.load(open("data.json"))
 
-def get_translation(word,case_sensitive = False):
-    word_lowered = ""
-    if not case_sensitive :
-        word_lowered = word.lower()
-    if word_lowered in data:
-        return data[word_lowered]
-    elif word in data:
-        return data[word]
+# finding max ratio between the 3 possibilities: lower, upper and original word
+def find_max_ratio(word):
+    word_lowered = word.lower()
+    word_upper = word.upper()
+    lst_close = get_close_matches(word,data.keys(),cutoff=0.7)
+    lst_close_lower = get_close_matches(word_lowered,data.keys(),cutoff=0.7)
+    lst_close_upper = get_close_matches(word_upper,data.keys(),cutoff=0.7)
+
+    ratio ,ratio_lower,ratio_upper = 0, 0, 0
+    if len(lst_close) != 0 : ratio = SequenceMatcher(None,lst_close[0],word).ratio()
+    if len(lst_close_lower) != 0 : ratio_lower = SequenceMatcher(None,lst_close_lower[0],word_lowered).ratio()
+    if len(lst_close_upper) != 0 : ratio_upper = SequenceMatcher(None,lst_close_upper[0],word_upper).ratio()
+
+    max_ratio = max(ratio,ratio_lower,ratio_upper)
+    if max_ratio < 0.8 :
+        return None
+    if ratio == max_ratio :
+        return lst_close[0]
+    elif ratio_lower == max_ratio :
+        return lst_close_lower[0]
     else:
-        if case_sensitive:
-            return ""
-        else:
-            originial_translation = get_translation(word,True)
-            if len(originial_translation) > 0:
-                return originial_translation
+        return lst_close_upper[0]
 
-            lst_close = get_close_matches(word_lowered,data.keys(),cutoff=0.7)
+def get_translation(word):
+    word_lowered = word.lower()
+    word_upper = word.upper()
 
-            if len(lst_close) == 0:
+    if word in data:
+        return data[word]
+    elif word_lowered in data:
+        return data[word_lowered]
+    elif word_upper in data:
+        return data[word_upper]
+    else :
+        closest_word = find_max_ratio(word)
+
+        if closest_word is None:
+            return "Sorry ... The word is not in the dictionary"
+        else :
+            answer = input(f"Did you mean {closest_word} ? If yes please type Y:\n")
+            if answer == "Y" :
+                return data[closest_word]
+            else:
                 return "Sorry ... The word is not in the dictionary"
-            else :
-                answer = input(f"Did you mean {lst_close[0]} ? If yes please type Y:\n")
-                if answer == "Y" :
-                    return data[lst_close[0]]
-                else:
-                    return "Sorry ... The word is not in the dictionary"
 
 def print_def(translation_lst):
     if type(translation_lst) != str:
