@@ -33,6 +33,7 @@ for city in city_names:
         longitude = location.longitude
         color = df.at[(df[df['שם יישוב'] == city].index)[0],'צבע לפי חישוב יומי']
         fg.add_child(folium.CircleMarker(location=[latitude,longitude],radius = '6', fill_color = color_producer(color), fill_opacity = 0.8))
-    
+        print(color)
+        
 map.add_child(fg)
 map.save("Corona_map_Israel.html")
