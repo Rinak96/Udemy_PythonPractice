@@ -5,4 +5,14 @@ After finishing my computer science degree in the Technion, I wanted to practice
 This repository is for educational purposes only.
 
 The course is "The Python Mega Course: Build 10 Real-world Applications".
-I will try my best to incorporate new features in the applications
+I will try my best to incorporate new features in the applications.
+
+1.EnglishDict - 
+input : a word in English
+output : the definitions (+ corrections)
+tools :  json file, difflib library to get closeset matches 
+
+2.Mapping -
+input : csv file of cities in Israel and their COVID19 status
+output : a map with markers indicating the color of the city {red, green, yellow, orange}
+tools : folium , pandas, geopy to convert city name into longtitude and latitude
