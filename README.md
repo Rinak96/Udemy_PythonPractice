@@ -26,6 +26,11 @@ Operations:<br>
 3. Update a game<br>
 4. Delete a game<br>
 5. Get best games rating<br>
+6. Get all games released in the past year (2021)<br>
+7. Get best games in the past year<br>
+8. Show games sorted by title<br>
+9. Show games by genre<br>
+10. Show best game in every genre<br>
 
 tools : sqlite3 , tkinter
 
