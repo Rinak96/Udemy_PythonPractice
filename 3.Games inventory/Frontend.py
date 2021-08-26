@@ -59,7 +59,7 @@ def update_command():
 
 def show_rating_command():
     list_of_games.delete(0,END)
-    for row in database.rating(int(selected_tuple[0])):
+    for row in database.max_rating():
         list_of_games.insert(END,row)
 
 window.wm_title("Games inventory")
@@ -121,7 +121,7 @@ b3 = Button(window,text="Update a game",width=12,command=update_command)
 b3.grid(row = 5,column = 5)
 b4 = Button(window,text="Delete a game",width=12,command=delete_command)
 b4.grid(row = 6,column = 5)
-b5 = Button(window,text="Show rating",width=12,command=show_rating_command)
+b5 = Button(window,text="Show best games",width=12,command=show_rating_command)
 b5.grid(row = 7,column = 5)
 b6=Button(window,text="Close", width=12,command=window.destroy)
 b6.grid(row=8,column=5)

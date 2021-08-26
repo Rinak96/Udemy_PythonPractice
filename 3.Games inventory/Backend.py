@@ -3,7 +3,7 @@ import sqlite3
 class Database:
 
     def __init__(self):
-        self.conn=sqlite3.connect("games.db")
+        self.conn=sqlite3.connect("3.Games inventory/games.db")
         self.cur=self.conn.cursor()
         self.cur.execute("CREATE TABLE IF NOT EXISTS games (id INTEGER PRIMARY KEY, title text, genre text, publisher text,developer text, releaseDate date, rating integer)")
         self.conn.commit()
@@ -22,8 +22,8 @@ class Database:
         rows=self.cur.fetchall()
         return rows
 
-    def rating(self,id):
-        self.cur.execute("SELECT rating FROM games WHERE id=?", (id,))
+    def max_rating(self):
+        self.cur.execute("SELECT title,rating FROM games WHERE rating = (SELECT MAX(rating) FROM games); ")
         rows=self.cur.fetchall()
         return rows
 
