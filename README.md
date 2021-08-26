@@ -25,7 +25,7 @@ Operations:<br>
 2. Search a game <br>
 3. Update a game<br>
 4. Delete a game<br>
-5. Get rating<br>
+5. Get best games rating<br>
 
 tools : sqlite3 , tkinter
 
