@@ -27,6 +27,31 @@ class Database:
         rows=self.cur.fetchall()
         return rows
 
+    def latest_games(self):
+        self.cur.execute("SELECT * FROM games ORDER BY releaseDate DESC LIMIT 3; ")
+        rows=self.cur.fetchall()
+        return rows
+    
+    def best_in_year(self):
+        self.cur.execute("SELECT * FROM games WHERE releaseDate >= DATE('now','-1 year') ORDER BY rating DESC;")
+        rows=self.cur.fetchall()
+        return rows
+
+    def sorted_games(self):
+        self.cur.execute("SELECT * FROM games ORDER BY title ASC;")
+        rows=self.cur.fetchall()
+        return rows
+
+    def games_by_genre(self):
+        self.cur.execute("SELECT genre,title,publisher,developer,releaseDate FROM games ORDER BY genre ASC;")
+        rows=self.cur.fetchall()
+        return rows
+
+    def best_by_genre(self):
+        self.cur.execute("SELECT genre,rating,title,publisher,developer,releaseDate FROM games GROUP BY genre HAVING MAX(rating) = rating;")
+        rows=self.cur.fetchall()
+        return rows
+
     def delete(self,id):
         self.cur.execute("DELETE FROM games WHERE id=?",(id,))
         self.conn.commit()

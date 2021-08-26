@@ -1,6 +1,6 @@
 """
 A program for games inventory with the information:
-Title, Genre, Publisher, Release Date, Rating, Id
+Title, Genre, Publisher, Release Date, Rating, Developer
 
 Operations:
 1. View all games
@@ -61,6 +61,32 @@ def show_rating_command():
     list_of_games.delete(0,END)
     for row in database.max_rating():
         list_of_games.insert(END,row)
+
+def latest_command():
+    list_of_games.delete(0,END)
+    for row in database.latest_games():
+        list_of_games.insert(END,row)
+
+def best_inyear_command():
+    list_of_games.delete(0,END)
+    for row in database.best_in_year():
+        list_of_games.insert(END,row)
+
+def sorted_games_command():
+    list_of_games.delete(0,END)
+    for row in database.sorted_games():
+        list_of_games.insert(END,row)
+
+def games_by_genre_command():
+    list_of_games.delete(0,END)
+    for row in database.games_by_genre():
+        list_of_games.insert(END,row)
+
+def best_by_genre_command():
+    list_of_games.delete(0,END)
+    for row in database.best_by_genre():
+        list_of_games.insert(END,row)
+
 
 window.wm_title("Games inventory")
 
@@ -125,5 +151,16 @@ b5 = Button(window,text="Show best games",width=12,command=show_rating_command)
 b5.grid(row = 7,column = 5)
 b6=Button(window,text="Close", width=12,command=window.destroy)
 b6.grid(row=8,column=5)
+
+b7 = Button(window,text="Show latest games",width=12,command=latest_command)
+b7.grid(row = 2,column = 6)
+b8 = Button(window,text="Best games in 2021",width=12,command=best_inyear_command)
+b8.grid(row = 3,column = 6)
+b9 = Button(window,text="Show sorted games",width=12,command=sorted_games_command)
+b9.grid(row = 4,column = 6)
+b10 = Button(window,text="Games by genre",width=12,command=games_by_genre_command)
+b10.grid(row = 5,column = 6)
+b11 = Button(window,text="Best in genre",width=12,command=best_by_genre_command)
+b11.grid(row = 6,column = 6)
 
 window.mainloop()
