@@ -1,0 +1,53 @@
+{
+    "sad": {
+        "memes": ["1stWorld.jpg","49b.jpg","crying-black-guy-meme.gif","sad-pepe-1.png","womanyellingcat-1573233850.jpg"]
+    },
+    "upset": {
+        "memes": ["1stWorld.jpg","49b.jpg","crying-black-guy-meme.gif","sad-pepe-1.png","womanyellingcat-1573233850.jpg"]
+    },
+    "happy": {
+        "memes": ["6088f9a30da8f40018033e29.jpeg","excited-little-girl.jpg","lqKlotB.jpeg","d4yfc0r-be60ec36-d198-4a07-a829-ba9f29a507fe.png","28xp-pepefrog-articleLarge.jpg","20180703190744-rollsafe-meme.jpeg","Leonardo-DiCaprio-laughing-meme-template-of-Django-Unchained-1024x1024.jpg"]
+    },
+    "crying": {
+        "memes": ["1stWorld.jpg","49b.jpg","crying-black-guy-meme.gif","sad-pepe-1.png","womanyellingcat-1573233850.jpg"]
+    },
+    "excited": {
+        "memes": ["excited-little-girl.jpg","39t1o.jpg","a85085095a93074523f346a3eb7a05b2.jpg"]
+    },
+    "alone": {
+        "memes": ["1stWorld.jpg","49b.jpg","download.jpeg","crying-black-guy-meme.gif","sad-pepe-1.png","womanyellingcat-1573233850.jpg"]
+    },
+    "depressed": {
+        "memes": ["1stWorld.jpg","49b.jpg","crying-black-guy-meme.gif","sad-pepe-1.png","womanyellingcat-1573233850.jpg"]
+    },
+    "afraid": {
+        "memes": ["300px-Scared_Hamster.jpg"]
+    },
+    "scared": {
+        "memes": ["300px-Scared_Hamster.jpg"]
+    },
+    "horrified": {
+        "memes": ["300px-Scared_Hamster.jpg"]
+    },
+    "lonely": {
+        "memes": ["1stWorld.jpg","49b.jpg","download.jpeg","crying-black-guy-meme.gif","sad-pepe-1.png","womanyellingcat-1573233850.jpg"]
+    },
+    "angry": {
+        "memes": ["womanyellingcat-1573233850.jpg","angry_pepe.jpg","angry1.png","angry2.jpeg"]
+    },
+    "rich": {
+        "memes": ["What-is-Dogecoin-Meme.jpg","39t1o.jpg"]
+    },
+    "in love": {
+        "memes": ["images.jpeg","original.jpg"]
+    },
+    "funny": {
+        "memes": ["wired-meme-nft-brian.jpg","Leonardo-DiCaprio-laughing-meme-template-of-Django-Unchained-1024x1024.jpg"]
+    },
+    "surprised": {
+        "memes": ["Ideas_Surprised_Pikachu_HD.jpg","4f78f816bfbebfd1bf079d6c8fa686c5.jpg","cb373ede0b7c7a4be1525a733d2e7d6c.jpg"]
+    },
+    "confused": {
+        "memes": ["cb373ede0b7c7a4be1525a733d2e7d6c.jpg"]
+    }
+}
