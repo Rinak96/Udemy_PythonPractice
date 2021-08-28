@@ -20,7 +20,7 @@ tools : folium , pandas, geopy to convert city name into longtitude and latitude
 
 <b>3.Game inventory - </b><br>
 A program for games inventory with the information:<br>
-Title, Genre, Publisher, Release Date, Rating, Id<br>
+Title, Genre, Publisher, Release Date, Rating, Developer<br>
 Operations:<br>
 1. View all games<br>
 2. Search a game <br>
