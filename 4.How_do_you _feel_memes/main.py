@@ -49,6 +49,7 @@ class LoginSuccessScreen(Screen):
         self.manager.current = "login_screen"
 
     def meme_generator(self, mood):
+        
         moods_memes = json.load(open("moods.json"))
         mood = mood.lower()
         self.ids.meme_image.opacity = 1
@@ -57,11 +58,12 @@ class LoginSuccessScreen(Screen):
             self.ids.meme_image.source = "memes/" + meme
 
         elif len(get_close_matches(mood,moods_memes.keys(),cutoff=0.7)) > 0 :
-            meme = random.choice((get_close_matches(mood,moods_memes.keys(),cutoff=0.7)))
-            if(type(meme) is list):
-                meme2 = meme[0]
-                self.ids.meme_image.source = "memes/" + meme2
+            closest_mood = (get_close_matches(mood,moods_memes.keys(),cutoff=0.7))
+            if(type(closest_mood) is list):
+                meme = random.choice(moods_memes[closest_mood[0]]['memes'])
+                self.ids.meme_image.source = "memes/" + meme
             else:
+                meme = random.choice(moods_memes[closest_mood]['memes'])
                 self.ids.meme_image.source = "memes/" + meme
 
         else:

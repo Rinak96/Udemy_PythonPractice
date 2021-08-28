@@ -108,9 +108,12 @@
             TextInput:
                 id: feeling
                 hint_text: "sad, happy, alone, excited ..."
-            Button:
-                text: "Generate MOOD MEME!"
-                on_press: root.meme_generator(root.ids.feeling.text)
+            RelativeLayout: 
+                Button:
+                    text: "Generate MOOD MEME!"
+                    on_press: root.meme_generator(root.ids.feeling.text)
+                    size_hint: 0.3,0.5
+                    pos_hint: {'center_x': 0.5, 'center_y':0.6}
             Image:
                 id: meme_image
                 source: ""
