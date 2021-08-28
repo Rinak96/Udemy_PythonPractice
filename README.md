@@ -34,3 +34,10 @@ Operations:<br>
 
 tools : sqlite3 , tkinter
 
+<b>4.How_do_you _feel_memes</b><br>
+An "app" for generating a meme based on the user's mood.<br>
+The app requiers registration.<br>
+input : a mood (will correct to the closest mood if there is a spelling mistake)<br>
+output : a meme that corresponds to the mood (randomly chosen between a list of memes)<br>
+tools : json files, difflib library to get closest matches, kivy <br>
+
