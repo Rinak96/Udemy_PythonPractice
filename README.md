@@ -16,6 +16,7 @@ tools :  json file, difflib library to get closeset matches<br>
 input : csv file of cities in Israel and their COVID19 status<br>
 output : a map with markers indicating the color of the city {red, green, yellow, orange}<br>
 tools : folium , pandas, geopy to convert city name into longtitude and latitude
+![4](https://user-images.githubusercontent.com/38704910/131208083-155e7fdc-631d-4843-914b-438ff2d8319c.jpg)
 
 <b>3.Game inventory - </b><br>
 A program for games inventory with the information:<br>
@@ -33,6 +34,7 @@ Operations:<br>
 10. Show best game in every genre<br>
 
 tools : sqlite3 , tkinter
+![3](https://user-images.githubusercontent.com/38704910/131208038-d8a733f7-26fb-4e79-8219-1c86a600fb5e.jpg)
 
 <b>4.How_do_you _feel_memes</b><br>
 An "app" for generating a meme based on the user's mood.<br>
@@ -41,3 +43,5 @@ input : a mood (will correct to the closest mood if there is a spelling mistake)
 output : a meme that corresponds to the mood (randomly chosen between a list of memes)<br>
 tools : json files, difflib library to get closest matches, kivy <br>
 
+![1](https://user-images.githubusercontent.com/38704910/131208009-01de69be-2ba3-4422-9a79-32d51750b571.jpg)
+![2](https://user-images.githubusercontent.com/38704910/131208010-1b9bda0b-8264-4f13-a7c7-5f1f0346e20d.jpg)
