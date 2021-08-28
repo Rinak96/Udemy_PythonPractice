@@ -16,7 +16,7 @@ tools :  json file, difflib library to get closeset matches<br>
 input : csv file of cities in Israel and their COVID19 status<br>
 output : a map with markers indicating the color of the city {red, green, yellow, orange}<br>
 tools : folium , pandas, geopy to convert city name into longtitude and latitude
-![4](https://user-images.githubusercontent.com/38704910/131208083-155e7fdc-631d-4843-914b-438ff2d8319c.jpg)
+![4](https://user-images.githubusercontent.com/38704910/131208189-20cb7d1f-781a-40fa-a73d-c834b4787076.jpg)
 
 <b>3.Game inventory - </b><br>
 A program for games inventory with the information:<br>
